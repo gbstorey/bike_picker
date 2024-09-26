@@ -3,27 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #8ACE00;
-  --foreground: #8ACE00;
+  --background: #fff;
+  --foreground: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #8ACE33;
-    --foreground: #8ACE33;
+    --background: #585858;
+    --foreground: #585858;
   }
 }
 
 body {
-  font-stretch: ultra-expanded;
-  font-size: 20rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  flex-direction: column;
-  color: black;
+  color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
