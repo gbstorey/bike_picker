@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react'
 import { Bike } from '../../types/bike'
  
-const defaultBike = {
+const defaultBike: Bike = {
     _id: "1",
     name: "Your Bike",
     description: "My Really Cool Bike",
@@ -10,7 +10,14 @@ const defaultBike = {
     }
 }
 
-export const AppContext = createContext<Bike>(defaultBike)
+const defaultContext = {
+    userBike: defaultBike,
+    setUserBike: (bike: Bike) => { 
+        console.log("User bike: ", bike)
+    }
+}
+
+export const AppContext = createContext(defaultContext)
  
 export default function ContextProvider({
   children,
@@ -18,5 +25,7 @@ export default function ContextProvider({
   children: React.ReactNode
 }) {
     const [userBike, setUserBike] = useState<Bike>(defaultBike)
-  return <AppContext.Provider value={userBike}>{children}</AppContext.Provider>
+    defaultContext.setUserBike = setUserBike;
+    defaultContext.userBike = userBike;
+  return <AppContext.Provider value={defaultContext}>{children}</AppContext.Provider>
 }

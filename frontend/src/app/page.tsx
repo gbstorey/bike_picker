@@ -6,7 +6,8 @@ import { AppContext } from "./context-provider";
 import ContextProvider from "./context-provider";
 
 export default function Home() {
-  const { name, description, components } = useContext(AppContext);
+  const { userBike } = useContext(AppContext);
+  const { name, description, components } = userBike;
   return (
     <ContextProvider>
       <main className="mx-4 my-4">
