@@ -1,5 +1,4 @@
-import CustomLink from "@/components/customLink";
-import Link from "next/link";
+import {CustomLink} from "@/components/customLink";
 
 export default async function Home() {
   return (

@@ -5,8 +5,7 @@ import { createColumnHelper } from "@tanstack/react-table";
 import { Frame } from "../../../types/parts/frame";
 import { frames } from "../../../utils/dummy";
 import Image from "next/image";
-import Link from "next/link";
-import CustomLink from "@/components/customLink";
+import {CustomLink} from "@/components/customLink";
 
 const columnHelper = createColumnHelper<Frame>();
 
@@ -60,7 +59,7 @@ const columns = [
   }),
 ];
 
-export default () => {
+export default function framePage() {
     return (
         <main className="m-4">
         <CustomLink href="/" linkText="Return Home"/>
