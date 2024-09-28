@@ -59,8 +59,6 @@ const columns = [
   }),
 ];
 
-console.log('hello world');
-
 export default function framePage() {
     return (
         <main className="m-4">
