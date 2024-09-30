@@ -6,6 +6,10 @@ const nextConfig = {
 				protocol: "https",
 				hostname: "www.statebicycle.com",
 			},
+			{
+				protocol: "https",
+				hostname: "images.pexels.com",
+			},
 		],
 	},
 };
