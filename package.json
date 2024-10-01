@@ -1,0 +1,15 @@
+{
+	"name": "bike_picker",
+	"version": "1.0.0",
+	"description": "A delightful app where you can build the perfect bike.",
+	"main": "index.js",
+	"scripts": {
+		"test": "cd frontend && npm run lint",
+		"prepare": "husky"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"husky": "^9.1.6"
+	}
+}
