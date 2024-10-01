@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function Home() {
 	const { userBike } = useContext(AppContext);
 	const { name, description, components } = userBike;
-
+	console.log("testing husky" as number);
 	return (
 		<ContextProvider>
 			<main className="mx-12 hero">
